@@ -13,6 +13,7 @@
 # Build results
 artifacts/
 [Bb]in/
+[Bb]in2/
 [Oo]bj/
 .dotnet/
 .tools/
