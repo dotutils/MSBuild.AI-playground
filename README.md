@@ -5,4 +5,6 @@ Playground for AI experiments
 
 ### MSBuild binlog RAG aided analysis
 
-<img width="862" alt="Gpt-build" src="docs/sample-prompt.png">
+![simplified diagram](docs/simplified-diagram.png)
+
+![sample prompt](docs/sample-prompt.png)
