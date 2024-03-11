@@ -36,7 +36,7 @@ internal class Program
         // 
         // Embeddings generation - run just once per binlog
         //
-        string ranksFileName = @"orchard-ranks.txt";
+        string ranksFileName = @"buildlink-ranks.txt";
         try
         {
             await BinlogToEmbeddingsFile(Path.Combine(GetResourcesDir(), @"buildlink-pack.binlog"), ranksFileName);
@@ -226,6 +226,11 @@ internal class Program
 
     static async Task BinlogToEmbeddingsFile(string binlogFile, string rankFile)
     {
+        if (File.Exists(rankFile))
+        {
+            return;
+        }
+
         string aoaiEndpoint = Environment.GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT")!;
         string aoaiApiKey = Environment.GetEnvironmentVariable("AZURE_OPENAI_API_KEY")!;
         string embeddingsModel = Environment.GetEnvironmentVariable("AZURE_OPENAI_EMBEDDINGS_MODEL")!;

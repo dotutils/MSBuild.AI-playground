@@ -7,4 +7,4 @@ Playground for AI experiments
 
 ![simplified diagram](docs/simplified-diagram.png)
 
-![sample prompt](docs/sample-prompt.png)
+![sample prompt](docs/sample-prompt.gif)
